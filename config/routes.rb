@@ -7,6 +7,8 @@ Rails.application.routes.draw do
   # get 'posts/show'
   # get 'posts/:id' => 'posts#show'
   # match 'job_evaluar/:evaluar', to: 'jobs#evaluar', via: 'post', as: :evaluar
+
+  # XXX ESTO NO LO HAGA ASI!!!! Es solo para demostracion.
   match 'posts/:id', to: 'posts#show', via: 'get', as: :posteo
 
   root to: 'posts#index'
