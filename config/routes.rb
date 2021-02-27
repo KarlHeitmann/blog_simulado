@@ -4,7 +4,10 @@ Rails.application.routes.draw do
   get 'posts' => 'posts#index'
   # XXX IMPORTANTE: Recuerde el primer parametro que sigue a get
   # es lo que aparece en la ruta
-  get 'posts/show'
+  # get 'posts/show'
+  # get 'posts/:id' => 'posts#show'
+  # match 'job_evaluar/:evaluar', to: 'jobs#evaluar', via: 'post', as: :evaluar
+  match 'posts/:id', to: 'posts#show', via: 'get', as: :posteo
 
   root to: 'posts#index'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html

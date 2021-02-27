@@ -3,17 +3,19 @@
 <table class="table">
   <thead>
     <tr>
+      <th scope="col">Valor de "i"</th>
       <th scope="col">Titulo</th>
       <th scope="col">Contenido</th>
       <th scope="col"></th>
     </tr>
   </thead>
   <tbody>
-    <% @posts.each do |post| %>
+    <% @posts.each_index do |i| %>
       <tr>
-        <th scope="row"><%= post[:titulo] %></th>
-        <td><%= "#{post[:contenido][0..50]}..." %></td>
-        <td><%= link_to 'Ver más', '#', class: 'btn btn-outline-primary' %></td>
+        <th scope="row"><%= i %></th>
+        <td><%= @posts[i][:titulo] %></td>
+        <td><%= "#{@posts[i][:contenido][0..50]}..." %></td>
+        <td><%= link_to 'Ver más', posteo_path(i), class: 'btn btn-outline-primary' %></td>
       </tr>
     <% end %>
   </tbody>

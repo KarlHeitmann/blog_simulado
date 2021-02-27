@@ -1,2 +1,4 @@
-<h1>------Posts#show</h1>
-<p>Find me in app/views/posts/show.html.erb</p>
+<h1><%= @posts[params["id"].to_i][:titulo] %></h1>
+<p><%= @posts[params["id"].to_i][:contenido] %></p>
+
+
