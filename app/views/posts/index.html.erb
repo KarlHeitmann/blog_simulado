@@ -5,6 +5,7 @@
     <tr>
       <th scope="col">Titulo</th>
       <th scope="col">Contenido</th>
+      <th scope="col"></th>
     </tr>
   </thead>
   <tbody>
@@ -12,6 +13,7 @@
       <tr>
         <th scope="row"><%= post[:titulo] %></th>
         <td><%= "#{post[:contenido][0..50]}..." %></td>
+        <td><%= link_to 'Ver más', '#', class: 'btn btn-outline-primary' %></td>
       </tr>
     <% end %>
   </tbody>
